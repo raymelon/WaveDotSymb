@@ -18,7 +18,7 @@ var src string =
 }
 `
 
-func main() {
+func lex() {
 
 	fmt.Println("Lexer start!")
 	size = len(src) - 1
@@ -71,4 +71,5 @@ func main() {
 	re = regexp.MustCompile("\\s+(\\|\\||&&|!)\\s+")
 	fmt.Printf("relational operators: %q\n" , re.FindAllString(src, size) )
 
+	fmt.Println("Lexer ended.")
 }
